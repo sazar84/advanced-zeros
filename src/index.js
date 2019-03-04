@@ -6,8 +6,10 @@ module.exports = function getZerosCount(number, base) {
 
   while (number >= index) {
     index *= 5;
-    round = Math.round(number/index);
+    //console.log(index);
+    round = Math.floor(number/index);
+    //console.log(round);
     zerocount += round;
-      }
+    }
   return zerocount;
 }
