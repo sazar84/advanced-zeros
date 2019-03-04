@@ -1,5 +1,7 @@
 module.exports = function getZerosCount(number, base) {
   // your implementation
+
+  // factorial zerocount-----------
   let index = 1;
   let zerocount = 0;
   let round;
@@ -7,9 +9,37 @@ module.exports = function getZerosCount(number, base) {
   while (number >= index) {
     index *= 5;
     //console.log(index);
-    round = Math.floor(number/index);
+    round = Math.floor(number / index);
     //console.log(round);
     zerocount += round;
+  }
+// base ---> prime factors array-----------
+  var ArrayIndex = 0;
+  var PrimeFactor = 2;
+  var PrimeFactorsArray = new Array();
+
+  if (base == 1 || base == 2) {
+    PrimeFactorsArray[ArrayIndex] = base;
+  } else {
+    do {
+      if (base % PrimeFactor == 0) {
+        PrimeFactorsArray[ArrayIndex] = PrimeFactor;
+        ArrayIndex++;
+        base /= PrimeFactor;
+      } else {
+        PrimeFactor++;
+      }
     }
+    while (PrimeFactor < base);
+    PrimeFactorsArray[ArrayIndex] = base;
+  }
+
+// compare------------
+
+
+
+
+
+
   return zerocount;
 }
