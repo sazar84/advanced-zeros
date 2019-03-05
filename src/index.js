@@ -13,7 +13,8 @@ module.exports = function getZerosCount(number, base) {
     //console.log(round);
     zerocount += round;
   }
-// base ---> prime factors array-----------
+
+  // base ---> prime factors array-----------
   var ArrayIndex = 0;
   var PrimeFactor = 2;
   var PrimeFactorsArray = new Array();
@@ -34,12 +35,22 @@ module.exports = function getZerosCount(number, base) {
     PrimeFactorsArray[ArrayIndex] = base;
   }
 
-// compare------------
+  // compare------------
+  var count;
+  var sum = 0;
 
+  do {
+    PrimeFactorsArray.forEach((ArrayIndex, count) => {
+    number /= ArrayIndex;
+      // console.log(number);
+      count++;
+      // console.log(count);
+      sum += number;
+    });
+} while (number >= ArrayIndex);
+// ---end--------
+var endOFzero;
+endOFzero = sum / count;
 
-
-
-
-
-  return zerocount;
+  return endOFzero;
 }
