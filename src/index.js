@@ -8,9 +8,9 @@ module.exports = function getZerosCount(number, base) {
 
   while (number >= index) {
     index *= 5;
-    //console.log(index);
+    console.log(index);
     round = Math.floor(number / index);
-    //console.log(round);
+    console.log(round);
     zerocount += round;
   }
 
@@ -36,12 +36,12 @@ module.exports = function getZerosCount(number, base) {
   }
 
   // compare------------
-  var count;
+  // var count;
   var sum = 0;
 
   do {
     PrimeFactorsArray.forEach((ArrayIndex, count) => {
-    number /= ArrayIndex;
+    number Math.floor= ArrayIndex;
       // console.log(number);
       count++;
       // console.log(count);
