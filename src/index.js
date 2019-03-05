@@ -36,21 +36,21 @@ module.exports = function getZerosCount(number, base) {
   }
 
   // compare------------
-  // var count;
+  var count;
   var sum = 0;
+  var endOFzero = 0;
 
   do {
     PrimeFactorsArray.forEach((ArrayIndex, count) => {
-    number Math.floor= ArrayIndex;
+    number = Math.floor(number / ArrayIndex);
       // console.log(number);
       count++;
       // console.log(count);
       sum += number;
-    });
+      // console.log(sum);
+      endOFzero = Math.floor(sum / count);
+      });
 } while (number >= ArrayIndex);
-// ---end--------
-var endOFzero;
-endOFzero = sum / count;
 
   return endOFzero;
 }
