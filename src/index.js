@@ -52,5 +52,5 @@ module.exports = function getZerosCount(number, base) {
       });
 } while (number >= ArrayIndex);
 
-  return zerocount;
+  return endOFzero;
 }
