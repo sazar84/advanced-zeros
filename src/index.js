@@ -37,9 +37,8 @@ module.exports = function getZerosCount(number, base) {
 
   // compare------------
   var sum = 0;
-
-var  all = {};
-  var min = {};
+  var  all = [];
+  var min;
   var arr = PrimeFactorsArray;
   var result = {};
   arr.forEach((a) => {
@@ -51,16 +50,18 @@ for (var key in result) {
   var number1 = number;
     do{
       number1 = Math.floor(number1 / key);
-        console.log(number1)
+        // console.log(number1)
       sum = Math.floor((sum + number1));
       // console.log(number)
    } while (number1 >= key);
-        console.log(result[key])
+        // console.log(result[key])
     sum = Math.floor(sum / result[key]);
-  all = sum;
-
-    console.log(sum)
+    console.log(sum);
+    all.push(sum);
+    min = Math.min(...all);
+    console.log(min)
   }
 
-  return endOFzero;
+
+  return min;
 }
